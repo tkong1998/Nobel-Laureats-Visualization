@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Laureates of Nobel Prizes, 1901-2015</title>
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="http://colorbrewer2.org/export/colorbrewer.js"></script>
+    <script type="text/javascript"  src="topojson.v1.min.js"></script>
+    <script src="http://d3js.org/queue.v1.min.js"></script>
+    <script type="text/javascript" src="d3-queue.v3.min.js"></script>
+    <script type="text/javascript" src="d3.tip.v0.6.3.js"></script>
+    <script src="https://d3js.org/d3-scale.v2.min.js"></script>
+    <script src="https://d3js.org/d3-array.v1.min.js"></script>
+    <script src="https://d3js.org/d3-color.v1.min.js"></script>
+    <script src="https://d3js.org/d3-format.v1.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="timeline.js"></script>
+</head>
+
+<body>
+
+    <h2> Winning Formula - Nobel Laureates</h2>
+    <div style = "
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        "id="mapSection">
+        <div class="columnLayout" id="map"></div>
+        <div class="columnLayout">
+            <h3>Winner Timeline By Category</h3>
+            <div style = "text-align: center;">
+                <svg width="360" height="50">
+                        <rect x="20" y="20" rx="0" ry="0" width="20" height="20" fill=indianred />
+                        <text x="5" y="12" fill=indianred>CHEM</text>
+
+                        <rect x="80" y="20" rx="0" ry="0" width="20" height="20" fill=DarkSlateGrey />
+                        <text x="65" y="12" fill=DarkSlateGrey>ECON</text>
+
+                        <rect x="140" y="20" rx="0" ry="0" width="20" height="20" fill=YellowGreen />
+                        <text x="136" y="12" fill=YellowGreen>LIT</text>
+
+                        <rect x="200" y="20" rx="0" ry="0" width="20" height="20" fill=Goldenrod />
+                        <text x="192" y="12" fill=Goldenrod>MED</text>
+
+                        <rect x="260" y="20" rx="0" ry="0" width="20" height="20" fill=Indigo />
+                        <text x="245" y="12" fill=Indigo>PEACE</text>
+                        
+                        <rect x="320" y="20" rx="0" ry="0" width="20" height="20" fill= tomato />
+                        <text x="316" y="12" fill=tomato >PHY</text>
+                </svg>
+            </div>
+            <div style = "text-align: center;">
+                <select id="preference" onchange="onChangeHandler()">
+                    <option value="category">Prize Category</option>
+                    <option value="year">Year</option>
+                </select>
+                <select id="order" onchange="onChangeHandler()">
+                    <option value="asc" selected>Ascending</option>
+                    <option value="desc">Descending</option>
+                </select>
+                <span></span>
+            </div>
+            <div style="margin-top: 5px; 
+                        padding-top: 5px;
+                        width: 450px;
+                        height: 400px;
+                        overflow: scroll;">
+                <svg id="yearAxis" width="36" height="2200"></svg>
+                <svg id="categoryBar" width="330" height="2200"></svg>
+            </div>
+        </div>
+    </div>
+    <div>
+        <p class = "describe" id="info-total">
+        </p>
+        <div style = "text-align: center;">
+            <svg id="genderPie" width="350" height="350"></svg>
+            <svg id="alivePie" width="350" height="350"></svg>
+            <svg id="sharePie" width ="350" height="350"></svg>
+        </div>
+    </div>
+    <script>
+        d3.csv("P5-datasets/nobel_laureates.csv", readData)
+    </script>
+    <div style = "float: none;" id="wrapper">
+        <h3>Age Trend of Nobel Prize Winners</h3>
+        <div id="chart2"></div>
+    </div>
+</body>
+</html>

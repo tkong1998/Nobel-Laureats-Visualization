@@ -1,0 +1,182 @@
+h2,h3{
+    text-align: center;
+    color: #2e86de;
+}
+
+h4 {
+    text-align: center;
+    color: #000;
+}
+
+body {
+    background-color: linen;
+    font-family: Georgia;
+}
+
+.describe {
+    color:#000;
+    text-align: center;
+
+}
+
+.describe em {
+    color:#000;
+    text-align: center;
+}
+.dataLine{
+    stroke-width: 1.1;
+    fill: none;
+}
+
+
+.avgLine{
+    stroke: black;
+    stroke-width: 2px;
+    stroke-dasharray: 6,8;
+}
+catLine{
+    stroke-width: 2px;
+}
+
+circle{
+    r: 3;
+    stroke-width: 0.2;
+}
+.circle2{
+    r:4;
+    fill: none;
+    stroke-width: 1px;
+}
+.textbox{
+    width: 180px;
+    height: 160px;
+    text-align-all: right;
+    text-anchor: end;
+}
+.linebox{
+    width:1075px;
+    height: 160px;
+    overflow: visible;
+}
+.title_text{
+    stroke: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+.text1{
+    font-weight: normal;
+    fill: black;
+    stroke: none;
+}
+.chemistry{
+    stroke: indianred;
+    fill: indianred;
+}
+.economics{
+    stroke: DarkSlateGrey;
+    fill: DarkSlateGrey;
+}
+.literature{
+    stroke: YellowGreen;
+    fill: YellowGreen;
+}
+.medicine{
+    stroke: Goldenrod;
+    fill: Goldenrod;
+}
+.peace{
+    stroke: Indigo;
+    fill: Indigo;
+}
+.physics{
+    stroke: tomato;
+    fill:tomato;
+}
+.axis path,
+.axis line {
+    stroke: grey;
+    stroke-width: 0.5;
+    shape-rendering: crispEdges;
+}
+div.tooltip {
+    color: white;
+    position: absolute;
+    text-align: left;
+    width: 300px;
+    padding: 12px;
+    font: 14px sans-serif;
+    background: dimgrey;
+}
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+/* Style the collapsible content. Note: hidden by default */
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: grey;
+}
+
+.selected {
+    fill: #2e86de;
+}
+
+.linkCategoryMap {
+    fill: #2e86de;
+}
+
+.linkMaptoData {
+    fill:#2e86de;
+}
+
+.year {
+    font-family: sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    fill: #5D6D7E;
+}
+
+path {
+    fill: #5D6D7E;
+}
+
+/* Axis */
+
+.axis text {
+    font-family: sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    fill: #5D6D7E;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #5D6D7E;
+    shape-rendering: crispEdges;
+}
+
+.row {
+    float: left;
+    clear: none; 
+}
+
+
+.columnLayout {
+    float:left;
+}
+
+div #map {
+    display: inline-block;
+}
+
